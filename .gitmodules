@@ -1,0 +1,60 @@
+[submodule "bundle/CloseTag"]
+	path = bundle/CloseTag
+	url = git://github.com/docunext/closetag.vim.git
+[submodule "bundle/CommandT"]
+	path = bundle/CommandT
+	url = git://git.wincent.com/command-t.git
+[submodule "bundle/CuteErrorMarker"]
+	path = bundle/CuteErrorMarker
+	url = git://github.com/Twinside/vim-cuteErrorMarker.git
+[submodule "bundle/ErrorMarker"]
+	path = bundle/ErrorMarker
+	url = git://github.com/vim-scripts/errormarker.vim.git
+[submodule "bundle/FSwitch"]
+	path = bundle/FSwitch
+	url = git://github.com/derekwyatt/vim-fswitch.git
+[submodule "bundle/Fugitive"]
+	path = bundle/Fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/FuzzyFinder"]
+	path = bundle/FuzzyFinder
+	url = git://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/L9"]
+	path = bundle/L9
+	url = git://github.com/vim-scripts/L9.git
+[submodule "bundle/NerdCommenter"]
+	path = bundle/NerdCommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/NerdTree"]
+	path = bundle/NerdTree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/Prolog"]
+	path = bundle/Prolog
+	url = https://github.com/adimit/prolog.vim.git
+[submodule "bundle/ScrollColors"]
+	path = bundle/ScrollColors
+	url = git://github.com/vim-scripts/ScrollColors.git
+[submodule "bundle/SnipMate"]
+	path = bundle/SnipMate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/SuperTab"]
+	path = bundle/SuperTab
+	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/Surround"]
+	path = bundle/Surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/Syntastic"]
+	path = bundle/Syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/TagBar"]
+	path = bundle/TagBar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/VisualStarSearch"]
+	path = bundle/VisualStarSearch
+	url = git://github.com/bronson/vim-visual-star-search.git
+[submodule "bundle/Voogle"]
+	path = bundle/Voogle
+	url = git://github.com/g3orge/vim-voogle.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = git://github.com/Valloric/YouCompleteMe.git
