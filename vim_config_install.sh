@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Prerequisites
-
 echo -e "\nPrerequisites\n"
 
 sudo apt-get install git build-essential cmake python-dev
@@ -19,7 +18,7 @@ echo -e "\nCreating vim folder ($VIM_DIR)\n"
 fi
 
 if [ ! -h "$SYM_LINK_VIM_DIR" ]; then
-echo -e "\nCreating symlink $SYM_LINK_VIM_DIR -> $VIM_DIR\n"
+    echo -e "\nCreating symlink $SYM_LINK_VIM_DIR -> $VIM_DIR\n"
     ln -s $VIM_DIR $SYM_LINK_VIM_DIR
 fi
 
@@ -27,84 +26,35 @@ echo -e "\nMoving into $VIM_DIR\n"
 cd $VIM_DIR
 
 echo -e "\nCloning git repository\n"
-git clone git@github.com:tcantenot/vim.git .
+git clone git@github.com:tcantenot/Vim.git .
 
-echo -e "\nCreating $BUNDLE_DIR directory\n"
 if [ ! -d "$BUNDLE_DIR" ]; then
-mkdir $BUNDLE_DIR
+    echo -e "\nCreating $BUNDLE_DIR directory\n"
+    mkdir $BUNDLE_DIR
 fi
 
 # Install plugins from git depositories
 echo -e "\nInstall plugins from git depositories\n"
 
-git submodule add git://github.com/docunext/closetag.vim.git $BUNDLE_DIR/CloseTag
-git submodule init && git submodule update
+cd $VIM_DIR/$BUNDLE_DIR
 
-git submodule add git://git.wincent.com/command-t.git $BUNDLE_DIR/CommandT
-git submodule init && git submodule update
+for d in $(find . -mindepth 1 -maxdepth 1 -type d)
+do
+    echo -e "\nInit and update $d\n"
+    cd $d && git submodule update --init && cd ..
+done 
 
-git submodule add git://github.com/Twinside/vim-cuteErrorMarker.git $BUNDLE_DIR/CuteErrorMarker
-git submodule init && git submodule update
-
-git submodule add git://github.com/vim-scripts/errormarker.vim.git $BUNDLE_DIR/ErrorMarker
-git submodule init && git submodule update
-
-git submodule add git://github.com/derekwyatt/vim-fswitch.git $BUNDLE_DIR/FSwitch
-git submodule init && git submodule update
-
-git submodule add git://github.com/tpope/vim-fugitive.git $BUNDLE_DIR/Fugitive
-git submodule init && git submodule update
-
-git submodule add git://github.com/vim-scripts/FuzzyFinder.git $BUNDLE_DIR/FuzzyFinder
-git submodule init && git submodule update
-
-git submodule add git://github.com/vim-scripts/L9.git $BUNDLE_DIR/L9
-git submodule init && git submodule update
-
-git submodule add git://github.com/scrooloose/nerdcommenter.git $BUNDLE_DIR/NerdCommenter
-git submodule init && git submodule update
-
-git submodule add git://github.com/scrooloose/nerdtree.git $BUNDLE_DIR/NerdTree
-git submodule init && git submodule update
-
-git submodule add https://github.com/adimit/prolog.vim.git $BUNDLE_DIR/Prolog
-git submodule init && git submodule update
-
-git submodule add git://github.com/vim-scripts/ScrollColors.git $BUNDLE_DIR/ScrollColors
-git submodule init && git submodule update
-
-git submodule add git://github.com/msanders/snipmate.vim.git $BUNDLE_DIR/SnipMate
-git submodule init && git submodule update
-
-git submodule add git://github.com/ervandew/supertab.git $BUNDLE_DIR/SuperTab
-git submodule init && git submodule update
-
-git submodule add git://github.com/tpope/vim-surround.git $BUNDLE_DIR/Surround
-git submodule init && git submodule update
-
-git submodule add git://github.com/scrooloose/syntastic.git $BUNDLE_DIR/Syntastic
-git submodule init && git submodule update
-
-git submodule add git://github.com/majutsushi/tagbar.git $BUNDLE_DIR/TagBar
-git submodule init && git submodule update
-
-git submodule add git://github.com/bronson/vim-visual-star-search.git $BUNDLE_DIR/VisualStarSearch
-git submodule init && git submodule update
-
-git submodule add git://github.com/g3orge/vim-voogle.git $BUNDLE_DIR/Voogle
-git submodule init && git submodule update
-
-git submodule add git://github.com/Valloric/YouCompleteMe.git $BUNDLE_DIR/YouCompleteMe
-git submodule init && git submodule update
+# Compile YouCompleteMe plugin
+echo -e "\n Building YouCompleteMe plugin\n"
 
 cd $VIM_DIR/$BUNDLE_DIR/YouCompleteMe \
-&& git submodule --init --recursive \
-
-echo -e "\n Building YouCompleteMe plugin\n"
-mkdir ycm_build && cd ycm_build \
+&& mkdir ycm_build && cd ycm_build \
 && cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON $VIM_DIR/$BUNDLE_DIR/YouCompleteMe/cpp \
-make \
+&& make \
 && cd .. && rm -rf ./ycm_build
+
+
+# Update recursively all plugins
 
 echo -e "\nMoving to $VIM_DIR\n"
 cd $VIM_DIR
@@ -112,7 +62,8 @@ cd $VIM_DIR
 echo -e "\nUpdating all plugins\n"
 git submodule foreach --recursive git pull origin master
 
-echo "Creating symlink $VIM_DIR/vimrc -> ~/.vimrc"
 if [ ! -h "./.vimrc" ]; then
+    echo "Creating symlink $VIM_DIR/vimrc -> ~/.vimrc"
     ln -s $VIM_DIR/vimrc ~/.vimrc
 fi
+
