@@ -3,7 +3,7 @@
 "       Thierry CANTENOT
 "
 " Version:
-"       1.5 - 24/05/2013
+"       1.6 - 31/10/2013
 "
 " Sections:
 "       - General
@@ -114,9 +114,10 @@ if has('statusline')
     set statusline+=%=%-14.(Line:%l/%L\ [%p%%]\ Col:%v\ [%b][0x%B]%)
 endif
 
-"Remove GVim Toolbar
-set guioptions-=T
-
+" Change interface
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+"set guioptions-=r  "remove right-hand scroll bar
 
 "----------------------------------------------------------------------
 " # Colorscheme

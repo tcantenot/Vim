@@ -3,10 +3,14 @@
 # Prerequisites
 echo -e "\nPrerequisites\n"
 
-sudo apt-get install git build-essential cmake python-dev
-sudo add-apt-repository ppa:kxstudio-team/builds
+sudo apt-get install -y git
+sudo apt-get install -y build-essential cmake python-dev
+sudo apt-get install -y cmake
+sudo apt-get install -y python-dev
+sudo apt-get install -y exuberant-ctags
+sudo add-apt-repository -y ppa:kxstudio-team/builds
 sudo apt-get update
-sudo apt-get install libclang-dev
+sudo apt-get install -y libclang-dev
 
 VIM_DIR=~/Config/Vim
 SYM_LINK_VIM_DIR=~/.vim
