@@ -128,7 +128,7 @@ set t_Co=256
 
 " Colorscheme choice
 
-let g:molokai_original=0
+let g:molokai_original=1
 colorscheme molokai "obsidian2 gentooish liquidcarbon kellys
 
 "set background=dark
@@ -144,7 +144,8 @@ colorscheme molokai "obsidian2 gentooish liquidcarbon kellys
 "----------------------------------------------------------------------
 
 " Set font
-set guifont=Inconsolata\ 11 "Monospace\ 10 "Inconsolata\ 13
+set guifont=Inconsolata\ 12
+"set guifont=Monospace\ 10
 
 " Activate indenting
 filetype indent plugin on
@@ -422,7 +423,8 @@ if has("autocmd")
     "autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()<CR>
 
     " OPENGL
-    autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vtx,*.frg set filetype=glsl
+    autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vtx,*.frg,*.vs,*.fs,*.gs set filetype=c
+
     " Prolog
     autocmd BufNewFile,BufRead *.pl set filetype=prolog
 
@@ -624,9 +626,9 @@ nnoremap <silent> ss     :FufFileWithCurrentBufferDir **/<CR>
 " YouCompleteMe
 
 nnoremap <F2> :YcmForceCompileAndDiagnostics<CR>
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.my_ycm_extra_conf.py'
 
-let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'h': 1, 'hpp': 1, 'inl': 1 }
+let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'h': 1, 'hpp': 1, 'inl': 1, 'py':1 }
 
 let g:syntastic_c_config_file="vim_syntax"
 let g:syntastic_cpp_config_file="vim_syntax"
@@ -634,6 +636,9 @@ let g:syntastic_cpp_check_header = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_register_as_syntastic_checker = 1
+"let g:SuperTabDefaultCompletionType = '<Tab>'
 
 nnoremap <silent> <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
@@ -645,3 +650,8 @@ set omnifunc=youcompleteme#OmniComplete
 
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/CloseTag/plugin/closetag.vim
+
+"----------------------------------------------------------------------
+" Doxygen
+
+"let g:load_doxygen_syntax = 1
