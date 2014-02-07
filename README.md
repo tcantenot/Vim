@@ -16,13 +16,13 @@ ___
 Airline
 --------
 ### Installation
-    git submodule add git@github.com:bling/vim-airline.git bundle/Airline
+    git submodule add git@github.com:bling/vim-airline.git ./bundle/Airline
     git submodule init && git submodule update
 
 CloseTag
 --------
 #### Installation
-	git submodule add git://github.com/docunext/closetag.vim.git bundle/CloseTag
+	git submodule add git://github.com/docunext/closetag.vim.git ./bundle/CloseTag
     git submodule init && git submodule update
 
 CommandT
@@ -68,6 +68,13 @@ L9
 #### Installation
 	git submodule add git://github.com/vim-scripts/L9.git ./bundle/L9
     git submodule init && git submodule update
+
+Jedi
+--
+#### Installation
+	git submodule add git@github.com:davidhalter/jedi-vim.git ./bundle/Jedi
+    git submodule init && git submodule update
+
 
 NerdCommenter
 -------------

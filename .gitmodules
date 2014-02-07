@@ -61,3 +61,6 @@
 [submodule "bundle/Airline"]
 	path = bundle/Airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "bundle/Jedi"]
+	path = bundle/Jedi
+	url = git@github.com:davidhalter/jedi-vim.git
