@@ -117,7 +117,7 @@ endif
 " Change interface
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
-"set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=r  "remove right-hand scroll bar
 
 "----------------------------------------------------------------------
 " # Colorscheme
@@ -144,7 +144,7 @@ colorscheme molokai "obsidian2 gentooish liquidcarbon kellys
 "----------------------------------------------------------------------
 
 " Set font
-set guifont=Inconsolata\ 12
+set guifont=Inconsolata\ For\ Powerline\ 12
 "set guifont=Monospace\ 10
 
 " Activate indenting
@@ -423,7 +423,7 @@ if has("autocmd")
     "autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()<CR>
 
     " OPENGL
-    autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vtx,*.frg,*.vs,*.fs,*.gs set filetype=c
+    autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vtx,*.frg,*.vs,*.fs,*.gs set filetype=glsl
 
     " Prolog
     autocmd BufNewFile,BufRead *.pl set filetype=prolog
@@ -623,6 +623,11 @@ nnoremap          s      <nop>
 nnoremap <silent> ss     :FufFileWithCurrentBufferDir **/<CR>
 
 "----------------------------------------------------------------------
+" Syntastic
+"let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+
+"----------------------------------------------------------------------
 " YouCompleteMe
 
 nnoremap <F2> :YcmForceCompileAndDiagnostics<CR>
@@ -655,3 +660,14 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 " Doxygen
 
 "let g:load_doxygen_syntax = 1
+
+" See: http://choorucode.com/2013/07/12/how-to-install-and-use-the-vim-airline-plugin-for-vim/
+"----------------------------------------------------------------------
+" Airline
+let g:airline_theme             = 'powerlineish'
+let g:airline_powerline_fonts   = 1
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'

@@ -12,6 +12,13 @@ ___
     git submodule foreach --recursive git pull origin master
 ___
 
+
+Airline
+--------
+### Installation
+    git submodule add git@github.com:bling/vim-airline.git bundle/Airline
+    git submodule init && git submodule update
+
 CloseTag
 --------
 #### Installation
