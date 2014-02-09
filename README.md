@@ -55,6 +55,10 @@ Fugitive
 	git submodule add git://github.com/tpope/vim-fugitive.git ./bundle/Fugitive
     git submodule init && git submodule update
 
+### Use Fugitive as Git mergetool
+    git config --global mergetool.fugitive.cmd 'vim -f -c "Gdiff" "$MERGED"'
+    git config --global merge.tool fugitive
+
 FuzzyFinder
 -----------
 #### Requirements
