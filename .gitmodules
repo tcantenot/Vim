@@ -64,3 +64,6 @@
 [submodule "bundle/Jedi"]
 	path = bundle/Jedi
 	url = git@github.com:davidhalter/jedi-vim.git
+[submodule "bundle/CtrlP"]
+	path = bundle/CtrlP
+	url = git@github.com:kien/ctrlp.vim.git
