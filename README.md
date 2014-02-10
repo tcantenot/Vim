@@ -12,6 +12,7 @@ ___
     git submodule foreach --recursive git pull origin master
 ___
 
+## Plugins
 
 Airline
 --------
@@ -160,4 +161,21 @@ YouCompleteMe
     && cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON ~/.vim/bundle/YouCompleteMe/cpp \
     && make \
     && cd .. && rm -rf ./ycm_build
+___
 
+## Syntax
+
+OPENGL 
+------
+    git submodule add git://github.com/beyondmarc/opengl.vim.git bundle/Syntax_OpenGL
+    git submodule init && git submodule update
+
+GLSL
+----
+    git submodule add git://github.com/beyondmarc/glsl.vim.git bundle/Syntax_GLSL
+    git submodule init && git submodule update
+
+HLSL
+----
+    git submodule add git://github.com/beyondmarc/hlsl.vim.git bundle/Syntax_HLSL
+    git submodule init && git submodule update

@@ -67,3 +67,12 @@
 [submodule "bundle/CtrlP"]
 	path = bundle/CtrlP
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "bundle/Syntax_GLSL"]
+	path = bundle/Syntax_GLSL
+	url = git://github.com/beyondmarc/glsl.vim.git
+[submodule "bundle/Syntax_HLSL"]
+	path = bundle/Syntax_HLSL
+	url = git://github.com/beyondmarc/hlsl.vim.git
+[submodule "bundle/Syntax_OpenGL"]
+	path = bundle/Syntax_OpenGL
+	url = git://github.com/beyondmarc/opengl.vim.git

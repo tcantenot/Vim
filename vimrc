@@ -3,7 +3,7 @@
 "       Thierry CANTENOT
 "
 " Version:
-"       1.6 - 31/10/2013
+"       2.0 - 10/02/2014
 "
 " Sections:
 "       - General
@@ -422,8 +422,11 @@ if has("autocmd")
     " Python
     "autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()<CR>
 
-    " OPENGL
+    " GLSL
     autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vtx,*.frg,*.vs,*.fs,*.gs set filetype=glsl
+
+    " HLSL
+    autocmd BufNewFile,BufRead *.fx,*.fxc,*.fxh,*.hlsl set ft=hlsl
 
     " Prolog
     autocmd BufNewFile,BufRead *.pl set filetype=prolog
@@ -633,7 +636,7 @@ let g:syntastic_enable_signs=1
 nnoremap <F2> :YcmForceCompileAndDiagnostics<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.my_ycm_extra_conf.py'
 
-let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'h': 1, 'hpp': 1, 'inl': 1, 'py':1 }
+let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'h': 1, 'hpp': 1, 'inl': 1 }
 
 let g:syntastic_c_config_file="vim_syntax"
 let g:syntastic_cpp_config_file="vim_syntax"
