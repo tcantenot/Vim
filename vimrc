@@ -638,6 +638,7 @@ let g:syntastic_enable_signs=1
 " YouCompleteMe
 
 nnoremap <F2> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <F7> :YcmDiags<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.my_ycm_extra_conf.py'
 
 let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'h': 1, 'hpp': 1, 'inl': 1 }
@@ -645,10 +646,11 @@ let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'h': 1, 'hpp': 1, 'inl': 1 }
 let g:syntastic_c_config_file="vim_syntax"
 let g:syntastic_cpp_config_file="vim_syntax"
 let g:syntastic_cpp_check_header = 1
+let g:ycm_auto_trigger = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
+"let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_register_as_syntastic_checker = 1
 "let g:SuperTabDefaultCompletionType = '<Tab>'
 
