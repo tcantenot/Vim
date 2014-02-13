@@ -70,6 +70,11 @@ set number
 " Show the cursor line
 set cursorline
 
+" Show the cursor line
+"au WinLeave * set nocursorline nocursorcolumn
+"au WinEnter * set cursorline cursorcolumn
+"set cursorline cursorcolumn
+
 " Scroll page when cursor is x lines away from an edge
 set scrolloff=5
 
