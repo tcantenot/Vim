@@ -163,12 +163,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-if has("autocmd")
-    filetype on
-    autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-endif
-
 " Indent mode
 set autoindent
 set smartindent
@@ -456,7 +450,7 @@ map <F9> :wa<cr> :make clear<cr> :make<cr> :cw<cr>
 
 nnoremap <leader>cw :call QuickfixToggle()<cr>
 
-" Toogle quickfix window
+" Toggle quickfix window
 let g:quickfix_is_open = 0
 
 function! QuickfixToggle()
