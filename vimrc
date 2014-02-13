@@ -639,7 +639,7 @@ let g:syntastic_enable_signs=1
 
 nnoremap <F2> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F7> :YcmDiags<CR>
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.my_ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/conf/.my_ycm_extra_conf.py'
 
 let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'h': 1, 'hpp': 1, 'inl': 1 }
 
