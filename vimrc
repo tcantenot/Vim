@@ -423,7 +423,7 @@ if has("autocmd")
     "autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()<CR>
 
     " GLSL
-    autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vtx,*.frg,*.vs,*.fs,*.gs set filetype=glsl
+    autocmd BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set ft=glsl430
 
     " HLSL
     autocmd BufNewFile,BufRead *.fx,*.fxc,*.fxh,*.hlsl set ft=hlsl
