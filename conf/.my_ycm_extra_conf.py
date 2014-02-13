@@ -35,6 +35,7 @@ import ycm_core
 # compilation database set (by default, one is not set).
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
+# --- Warnings ---
 '-pedantic',
 '-Wall',
 '-Wextra',
@@ -51,7 +52,7 @@ flags = [
 '-Wredundant-decls',
 '-Winit-self',
 '-Wswitch-default',
-'-Wswitch-enum',
+'-Wswitch',
 '-Wundef',
 '-Winline',
 '-W',
@@ -61,6 +62,11 @@ flags = [
 '-Wshadow',
 '-fexceptions',
 '-DNDEBUG',
+'-Wno-gnu', # Suppress anonymous struct warnings
+'-Wno-mismatched-tags', # Suppress mismatched (struct - class) warnings
+
+# --- Other flags ---
+
 # You 100% do NOT need -DUSE_CLANG_COMPLETER in your flags; only the YCM
 # source code needs it.
 #'-DUSE_CLANG_COMPLETER',
@@ -77,6 +83,8 @@ flags = [
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x',
 #'c++',
+
+# --- Includes ---
 #'-isystem',
 #'../BoostParts',
 #'-isystem',
