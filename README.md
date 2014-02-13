@@ -71,13 +71,13 @@ FuzzyFinder
 L9
 --
 #### Installation
-	git submodule add git://github.com/vim-scripts/L9.git ./bundle/L9
+    git submodule add git://github.com/vim-scripts/L9.git ./bundle/L9
     git submodule init && git submodule update
 
 Jedi
 --
 #### Installation
-	git submodule add git@github.com:davidhalter/jedi-vim.git ./bundle/Jedi
+    git submodule add git@github.com:davidhalter/jedi-vim.git ./bundle/Jedi
     git submodule init && git submodule update
 
 
@@ -165,7 +165,7 @@ ___
 
 ## Syntax
 
-OPENGL 
+OPENGL
 ------
     git submodule add git://github.com/beyondmarc/opengl.vim.git bundle/Syntax_OpenGL
     git submodule init && git submodule update
