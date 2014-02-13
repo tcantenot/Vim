@@ -381,7 +381,7 @@ set tags=./tags/
 " # Syntax
 "----------------------------------------------------------------------
 
-function! <SID>StripTrailingWhitespaces()
+function! StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
     let _s=@/
     let l = line(".")
@@ -437,8 +437,12 @@ if has("autocmd")
     " LaTex
     "autocmd FileType tex
 
+    " Strip trailing whitespaces
+    autocmd BufWritePre *.* :call StripTrailingWhitespaces()
+
 endif
 
+" Strip trailing whitespaces
 nnoremap <silent> <F6> :call <SID>StripTrailingWhitespaces()<CR>
 
 "----------------------------------------------------------------------
