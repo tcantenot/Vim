@@ -236,18 +236,19 @@ vnoremap <M-k> :m '<-2<cr>gv=gv
 
 
 " Show numbering (absolute / relative)
-function! ToggleRelNumbering() "{{{
-    if &number
-        set relativenumber
-    else
+function! ToggleRelativeNumber()
+    if &relativenumber
+        set norelativenumber
         set number
+    else
+        set nonumber
+        set relativenumber
     endif
-endfunction "}}}
-
+endfunc
 
 " Toggle between absolute / relative line numbering
-nmap <leader>n :call ToggleRelNumbering()<cr>
-vmap <leader>n :call ToggleRelNumbering()<cr>gv
+nmap <leader>n :call ToggleRelativeNumber()<cr>
+vmap <leader>n :call ToggleRelativeNumber()<cr>gv
 
 
 "----------------------------------------------------------------------
