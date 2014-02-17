@@ -443,7 +443,7 @@ if has("autocmd")
 endif
 
 " Strip trailing whitespaces
-nnoremap <silent> <F6> :call <SID>StripTrailingWhitespaces()<CR>
+nnoremap <silent> <F6> :call StripTrailingWhitespaces()<CR>
 
 "----------------------------------------------------------------------
 " # Compilation
