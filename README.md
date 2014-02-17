@@ -23,37 +23,37 @@ Airline
 CloseTag
 --------
 #### Installation
-	git submodule add git://github.com/docunext/closetag.vim.git ./bundle/CloseTag
+    git submodule add git://github.com/docunext/closetag.vim.git ./bundle/CloseTag
     git submodule init && git submodule update
 
 CommandT
 --------
 #### Installation
-	git submodule add git://git.wincent.com/command-t.git ./bundle/CommandT
+    git submodule add git://git.wincent.com/command-t.git ./bundle/CommandT
     git submodule init && git submodule update
 
 CuteErrorMarker
 ---------------
 #### Installation
-	git submodule add git://github.com/Twinside/vim-cuteErrorMarker.git ./bundle/CuteErrorMarker
+    git submodule add git://github.com/Twinside/vim-cuteErrorMarker.git ./bundle/CuteErrorMarker
     git submodule init && git submodule update
 
 ErrorMarker
 -----------
 #### Installation
-	git submodule add git://github.com/vim-scripts/errormarker.vim.git ./bundle/ErrorMarker
+    git submodule add git://github.com/vim-scripts/errormarker.vim.git ./bundle/ErrorMarker
     git submodule init && git submodule update
 
 FSwitch
 -------
 #### Installation
-	git submodule add git://github.com/derekwyatt/vim-fswitch.git ./bundle/FSwitch
+    git submodule add git://github.com/derekwyatt/vim-fswitch.git ./bundle/FSwitch
     git submodule init && git submodule update
 
 Fugitive
 --------
 #### Installation
-	git submodule add git://github.com/tpope/vim-fugitive.git ./bundle/Fugitive
+    git submodule add git://github.com/tpope/vim-fugitive.git ./bundle/Fugitive
     git submodule init && git submodule update
 
 ### Use Fugitive as Git mergetool
@@ -65,7 +65,13 @@ FuzzyFinder
 #### Requirements
     FuzzyFinder requires the L9 library
 #### Installation
-	git submodule add git://github.com/vim-scripts/FuzzyFinder.git ./bundle/FuzzyFinder
+    git submodule add git://github.com/vim-scripts/FuzzyFinder.git ./bundle/FuzzyFinder
+    git submodule init && git submodule update
+
+GitGutter
+---------
+#### Installation
+    git submodule add git://github.com/airblade/vim-gitgutter.git ./bundle/GitGutter
     git submodule init && git submodule update
 
 L9
@@ -84,67 +90,67 @@ Jedi
 NerdCommenter
 -------------
 #### Installation
-	git submodule add git://github.com/scrooloose/nerdcommenter.git ./bundle/NerdCommenter
+    git submodule add git://github.com/scrooloose/nerdcommenter.git ./bundle/NerdCommenter
     git submodule init && git submodule update
 
 NerdTree
 --------
 #### Installation
-	git submodule add git://github.com/scrooloose/nerdtree.git ./bundle/NerdTree
+    git submodule add git://github.com/scrooloose/nerdtree.git ./bundle/NerdTree
     git submodule init && git submodule update
 
 Prolog
 --------
 #### Installation
-	git submodule add https://github.com/adimit/prolog.vim.git ./bundle/Prolog
+    git submodule add https://github.com/adimit/prolog.vim.git ./bundle/Prolog
     git submodule init && git submodule update
 
 ScrollColors
 ------------
 #### Installation
-	git submodule add git://github.com/vim-scripts/ScrollColors.git ./bundle/ScrollColors
+    git submodule add git://github.com/vim-scripts/ScrollColors.git ./bundle/ScrollColors
     git submodule init && git submodule update
 
 SnipMate
 --------
 #### Installation
-	git submodule add git://github.com/msanders/snipmate.vim.git ./bundle/Snipmate
+    git submodule add git://github.com/msanders/snipmate.vim.git ./bundle/Snipmate
     git submodule init && git submodule update
 
 SuperTab
 --------
 #### Installation
-	git submodule add git://github.com/ervandew/supertab.git ./bundle/SuperTab
+    git submodule add git://github.com/ervandew/supertab.git ./bundle/SuperTab
     git submodule init && git submodule update
 
 Surround
 --------
 #### Installation
-	git submodule add git://github.com/tpope/vim-surround.git ./bundle/Surround
+    git submodule add git://github.com/tpope/vim-surround.git ./bundle/Surround
     git submodule init && git submodule update
 
 Syntastic
 ---------
 #### Installation
-	git submodule add git://github.com/scrooloose/syntastic.git ./bundle/Syntastic
+    git submodule add git://github.com/scrooloose/syntastic.git ./bundle/Syntastic
     git submodule init && git submodule update
 
 TagBar
 ------
 #### Installation
-	git submodule add git://github.com/majutsushi/tagbar.git ./bundle/TagBar
+    git submodule add git://github.com/majutsushi/tagbar.git ./bundle/TagBar
     git submodule init && git submodule update
 
 Visual Star Search
 ------------------
 #### Installation
-	git submodule add git://github.com/bronson/vim-visual-star-search.git ./bundle/VisualStarSearch
+    git submodule add git://github.com/bronson/vim-visual-star-search.git ./bundle/VisualStarSearch
     git submodule init && git submodule update
 
 Voogle
 ------
 #### Installation
-	git submodule add git://github.com/g3orge/vim-voogle.git ./bundle/Voogle
+    git submodule add git://github.com/g3orge/vim-voogle.git ./bundle/Voogle
     git submodule init && git submodule update
 
 YouCompleteMe

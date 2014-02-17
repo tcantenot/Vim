@@ -76,3 +76,6 @@
 [submodule "bundle/Syntax_OpenGL"]
 	path = bundle/Syntax_OpenGL
 	url = git://github.com/beyondmarc/opengl.vim.git
+[submodule "bundle/GitGutter"]
+	path = bundle/GitGutter
+	url = git://github.com/airblade/vim-gitgutter.git
