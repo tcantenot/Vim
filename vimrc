@@ -20,6 +20,8 @@
 "
 "----------------------------------------------------------------------
 
+" TODO REMOVE THIS
+ "let g:loaded_youcompleteme = 1
 
 "----------------------------------------------------------------------
 " #General
@@ -400,6 +402,7 @@ if has("autocmd")
 
     " Tab
     autocmd Filetype html  setlocal ts=2 sts=2 sw=2
+    autocmd Filetype htmldjango  setlocal ts=2 sts=2 sw=2
     autocmd Filetype xml   setlocal ts=2 sts=2 sw=2
     autocmd Filetype eruby setlocal ts=2 sts=2 sw=2
     autocmd Filetype ruby  setlocal ts=2 sts=2 sw=2
@@ -408,7 +411,7 @@ if has("autocmd")
 
     " C / C++
     autocmd BufNewFile,BufRead,BufEnter *.c setl filetype=c
-    autocmd BufNewFile,BufRead,BufEnter *.h,*.cpp,*.hpp,*.inl setl filetype=cpp
+    autocmd BufNewFile,BufRead,BufEnter *.h,*.cpp,*.hpp,*.inl,*.hxx,*.cxx,*.txx setl filetype=cpp
 
     " JSON / JavaScript
     autocmd BufNewFile,BufRead *.json set filetype=javascript
@@ -680,3 +683,13 @@ let g:airline_enable_syntastic  = 1
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
+
+
+"----------------------------------------------------------------------
+" Vim Gutter
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hu <Plug>GitGutterRevertHunk
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
